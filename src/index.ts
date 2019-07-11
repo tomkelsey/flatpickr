@@ -1901,8 +1901,9 @@ function FlatpickrInstance(
 
       if (self.selectedDates) {
         self.selectedDates = self.selectedDates.filter(d => isEnabled(d));
-        if (!self.selectedDates.length && type === "min")
-          setHoursFromDate(dateObj);
+        // See: https://github.com/flatpickr/flatpickr/issues/1869
+        // if (!self.selectedDates.length && type === "min")
+        //   setHoursFromDate(dateObj);
         updateValue();
       }
 
